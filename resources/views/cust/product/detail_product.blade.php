@@ -65,6 +65,7 @@
         </div>
         <div class="p-6">
             <h3 class="text-lg font-semibold mb-4">Metode Pembayaran</h3>
+            
         </div>
     </div>
 </body>
