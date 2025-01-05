@@ -10,7 +10,7 @@
                 <div class="mt-4 flex justify-between">
                     <div>
                         <h3 class="text-sm text-gray-700">
-                            <a href="#">
+                            <a href="/detail_product">
                                 <span aria-hidden="true" class="absolute inset-0"></span>
                                 Basic Tee
                             </a>
@@ -20,7 +20,6 @@
                     <p class="text-sm font-medium text-gray-900">$35</p>
                 </div>
             </div>
-
             <!-- More products... -->
             <div class="group relative">
                 <img src="/images/bg2.jpg"
@@ -29,7 +28,7 @@
                 <div class="mt-4 flex justify-between">
                     <div>
                         <h3 class="text-sm text-gray-700">
-                            <a href="#">
+                            <a href="/detail_product">
                                 <span aria-hidden="true" class="absolute inset-0"></span>
                                 Basic Tee
                             </a>

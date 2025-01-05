@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pembayaran Ticket</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body class="font-sans bg-gray-100 m-0 p-0">
-
-    <h1 class="text-center font-bold">PEMBAYARAN TICKET
+  @extends('layout.master')
+  @section('title', 'Detail Product')
+  @section('content')
+    <h1 class=" mt-32 text-5xl	 text-center font-bold">PEMBAYARAN TICKET
     </h1>
-
-    <div class="max-w-4xl mx-auto my-5 p-5 bg-gray-200/70 rounded-lg shadow-lg">
+    <div class="max-w-4xl mb-20 mt-5 mx-auto p-5 bg-gray-200/70 rounded-lg shadow-lg">
         <div class="flex items-center py-7 gap-7">
             <!-- Gambar -->
             <div class="flex-2">
@@ -68,6 +58,5 @@
             
         </div>
     </div>
-</body>
+@endsection
 
-</html>

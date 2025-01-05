@@ -3,7 +3,7 @@
 @section('title', 'Home Page')
 
 @section('content')
-{{-- BG --}}
+@include('layout.bg')
 
 
 
