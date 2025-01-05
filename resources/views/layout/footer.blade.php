@@ -2,8 +2,8 @@
 <div class="bg-gray-300 text-gray-800  mx-auto py-6 px-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
     <!-- Follow Us Section -->
     <div>
-        <h4 class="font-bold mb-2">Follow Us</h4>
-        <div class="flex justify-center md:justify-start space-x-4">
+        <h4 class="font-bold mb-2 text-start">Follow Us</h4>
+        <div class="flex justify-start lg:justify-start md:justify-start space-x-4">
             <a href="#" class="text-gray-600 hover:text-gray-800">
                 <span class="sr-only">Instagram</span>
                 <!-- Instagram Icon -->

@@ -1,14 +1,16 @@
  @include('cust.login.login')
- <header class="fixed backdrop-blur-lg inset-x-0 top-0 z-50">
+ <header class="fixed scroll backdrop-blur-lg inset-x-0 top-0 z-50">
      <nav class="flex  items-center justify-between p-6">
          <div>
-             <a href="#" class="text-white text-xl font-semibold">LOGO</a>
+             <a href="#" class="text-blue-400 text-xl font-semibold">LOGO</a>
          </div>
          {{-- login Button --}}
          <div class="hidden md:flex">
              <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
-                 class=" text-white px-6 py-2 border border-white rounded-full bg-transparent hover:bg-zinc-900" type="button">
-                LOGIN
+                 class=" px-6 py-2 border-2 border-blue-500 rounded-md bg-transparent hover:border-blue-800 hover:text-blue-800" type="button">
+                <span class="font-bold text-blue-500  hover:border-blue-800 hover:text-blue-800">
+                    LOGIN
+                    </span>
              </button>
          </div>
          {{-- toogle menu --}}
