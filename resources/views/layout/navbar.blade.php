@@ -1,5 +1,5 @@
  @include('cust.login.login')
- <header class="fixed backdrop-blur-lg inset-x-0 top-0 z-50">
+ <header class="fixed scroll backdrop-blur-lg inset-x-0 top-0 z-50">
      <nav class="flex  items-center justify-between p-6">
          <div>
              <a href="#" class="text-blue-400 text-xl font-semibold">LOGO</a>
