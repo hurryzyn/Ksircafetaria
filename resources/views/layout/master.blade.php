@@ -13,7 +13,7 @@
     <title>@yield('title', 'Default Title')</title>
 </head>
 
-<body class="bg-sky-100">
+<body >
     @include('layout.navbar')
     
    <main>
