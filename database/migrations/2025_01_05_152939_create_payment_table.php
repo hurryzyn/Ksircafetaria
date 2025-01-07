@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('penggunas', function (Blueprint $table) {
-            $table->string('id', 36); // UUID dari Firebase
-            $table->string('name', 100);
-            $table->string('email', 255)->unique();
-            $table->string('phone', 15)->nullable();
-            $table->enum('role', ['user', 'admin']);
+        Schema::create('payment', function (Blueprint $table) {
+            $table->id();
+            $table->string('checkout_link');
+            $table->string('external_id');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('penggunas');
+        Schema::dropIfExists('payment');
     }
 };
