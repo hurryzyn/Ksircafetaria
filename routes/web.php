@@ -17,6 +17,21 @@ Route::get('/cust/login', function () {
 })->name('login');
 Route::get('/admin/dashboard/dashboard', function () {
     return view('admin.dashboard.dashboard');
-})->name('login');
+})->name('dashboard');
+Route::get('/admin/event/event', function () {
+    return view('admin.event.event');
+})->name('event');
+Route::get('/admin/ticket/ticket', function () {
+    return view('admin.ticket.ticket');
+})->name('ticket');
+Route::get('/admin/absen/absen', function () {
+    return view('admin.absen.absen');
+})->name('absen');
+Route::get('/admin/user/usertable', function () {
+    return view('admin.user.usertable');
+})->name('usertable');
 
 
+Route::middleware(['checkrole:admin'])->group(function () {
+    // Rute yang hanya dapat diakses oleh pengguna dengan peran admin
+});
