@@ -15,5 +15,8 @@ Route::get('/detail_product', function () {
 Route::get('/cust/login', function () {
     return view('cust.login.login');
 })->name('login');
+Route::get('/admin/dashboard/dashboard', function () {
+    return view('admin.dashboard.dashboard');
+})->name('login');
 
 
