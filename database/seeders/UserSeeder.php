@@ -28,7 +28,6 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('johndoe123'),
                 'role' => 'user',
             ],
-            // Tambahkan data pengguna lainnya sesuai kebutuhan proyek Anda
-        ]);
+             ]);
     }
 }

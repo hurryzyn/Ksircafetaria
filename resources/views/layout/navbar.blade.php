@@ -2,13 +2,13 @@
 @include('cust.login.register')
 
 <!-- Header -->
-<header class="fixed top-0 left-0 h-[80px] right-0 z-40 backdrop-blur-lg">
+<header class="fixed top-0 left-0 h-24 right-0 z-40 backdrop-blur-lg">
     <nav class="flex items-center justify-between px-6 pb-0">
         <!-- Logo -->
-        <div class="w-[109px]">
-            <a href="home"> <img src="/images/logo.png" alt=""></a>
+        <div class="w-24">
+            <a href="{{ route('home') }}"> <img src="/images/logo.png" alt="Logo" class="w-full h-auto"></a>
         </div>
-
+        @guest
         <!-- Desktop Links -->
         <div class="hidden md:flex items-center space-x-6 ">
             <!-- Login and Register Buttons -->
@@ -20,7 +20,7 @@
                 class="px-6 py-2 rounded-md bg-blue-500 hover:bg-blue-800 ">
                 <span class="font-bold text-white">REGISTER</span>
             </button>
-
+            @endguest
             @auth
                 <!-- Profile Dropdown -->
                 <div x-data="{ open: false }" class="relative ml-3">

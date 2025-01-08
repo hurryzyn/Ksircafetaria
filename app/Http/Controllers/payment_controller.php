@@ -25,7 +25,7 @@ class payment_controller extends Controller
             'redirect_url' => 'http://localhost:8000/payment/callback',
         ];
 
-        $createInvoice = \Xendit\Invoice::create($params);
+        // $createInvoice = \Xendit\Invoice::create($params);
 
         $payment = new Payment();
         $payment->status='PENDING';

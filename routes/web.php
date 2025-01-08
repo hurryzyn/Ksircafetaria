@@ -1,37 +1,48 @@
 <?php
-
-use Faker\Guesser\Name;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
+// Route untuk login
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+// Route untuk registrasi
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
+// Route untuk halaman home yang menampilkan semua event
+Route::get('/home', [ProductController::class, 'index'])->name('home');
+
+// Route untuk halaman detail produk berdasarkan ID event
+Route::get('/detail_product/{id}', [ProductController::class, 'show'])->name('product.show');
+
+// Route untuk halaman utama
+Route::get('/', [ProductController::class, 'index'])->name('home');
+
+// Route untuk pemesanan tiket
+Route::post('/book_ticket/{id}', [ProductController::class, 'bookTicket'])->name('book.ticket');
+
+// Route untuk halaman booking (jika diperlukan)
+Route::get('/booking', [BookingController::class, 'index'])->name('booking.index');
+
+// Route halaman statis
+Route::get('/product', function () {
+    return view('cust.product.product');
 });
-Route::get('/home', function () {
-    return view('home');
-});
-Route::get('/detail_product', function () {
-    return view('cust.product.detail_product');
-});
-Route::get('/cust/login', function () {
-    return view('cust.login.login');
-})->name('login');
-Route::get('/admin/dashboard/dashboard', function () {
+Route::get('/dashboard', function () {
     return view('admin.dashboard.dashboard');
 })->name('dashboard');
-Route::get('/admin/event/event', function () {
+Route::get('/event', function () {
     return view('admin.event.event');
 })->name('event');
-Route::get('/admin/ticket/ticket', function () {
+Route::get('/ticket', function () {
     return view('admin.ticket.ticket');
 })->name('ticket');
-Route::get('/admin/absen/absen', function () {
-    return view('admin.absen.absen');
-})->name('absen');
-Route::get('/admin/user/usertable', function () {
+Route::get('/user', function () {
     return view('admin.user.usertable');
 })->name('usertable');
-
-
-Route::middleware(['checkrole:admin'])->group(function () {
-    // Rute yang hanya dapat diakses oleh pengguna dengan peran admin
-});
+Route::get('/absen', function () {
+    return view('admin.absen.absen');
+})->name('absen');

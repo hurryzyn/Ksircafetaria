@@ -57,7 +57,6 @@
                                         </button>
                                     </td>
                                 </tr>
-                                <!-- More rows... -->
                             </tbody>
                         </table>
                     </div>

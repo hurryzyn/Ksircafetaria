@@ -6,10 +6,6 @@
 @include('layout.bg')
 
 
-
-
-
-{{-- Test --}}
-    @include('cust.product.product')
+@include('cust.product.product', ['events' => $events])
 
 @endsection
