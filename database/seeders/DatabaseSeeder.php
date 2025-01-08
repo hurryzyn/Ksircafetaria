@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             EventsSeeder::class,
             TicketsSeeder::class,
             BookingsSeeder::class,
+            absenSeeder::class,
         ]);
     }
 }

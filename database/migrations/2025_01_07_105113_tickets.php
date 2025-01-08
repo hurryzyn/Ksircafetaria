@@ -12,7 +12,8 @@ return new class extends Migration
             $table->foreignId('event_id')->constrained()->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->decimal('price', 10, 2);
-            $table->enum('status', ['paid', 'unpaid'])->default('unpaid');
+            $table->string('unique_code')->nullable();
+            $table->boolean('used')->default(false);
             $table->timestamps();
         });
     }
